@@ -3,7 +3,7 @@ INCLUDE_DIR := include
 
 NVCC := nvcc
 CXXFLAGS := -Wall -I$(INCLUDE_DIR)
-TARGET := main
+TARGET := main.out
 
 SOURCES := $(wildcard $(SOURCE_DIR)/*.cu)
 OBJECTS := $(SOURCES:.cpp=.o)

@@ -48,7 +48,7 @@ double sum_gpu(double *array1, double *array2, int N)
 
 int main()
 {
-    int N = 100000001;
+    int N = 100001;
     double *array1 = new double[N];
     double *array2 = new double[N];
 

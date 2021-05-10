@@ -1,10 +1,8 @@
 #include "arr_add.hpp"
 
 
-__global__ void sum_cuda(double *array1,
-                         double *array2,
-                         double *array3,
-                         int N)
+__global__ void
+sum_cuda(double *array1, double *array2, double *array3, int N)
 {
     int i = threadIdx.x;
     for (int j = 0; j < (N / MAX_THREAD) && (i + j * MAX_THREAD) < N; ++j) {
