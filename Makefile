@@ -1,10 +1,11 @@
+SOURCE_DIR := src
+INCLUDE_DIR := include
+
 NVCC := nvcc
-CXXFLAGS := -Wall
+CXXFLAGS := -Wall -I$(INCLUDE_DIR)
 TARGET := main
 
-SOURCE_DIR := src
-
-SOURCES := $(wildcard $(SOURCE_DIR)/*.cpp)
+SOURCES := $(wildcard $(SOURCE_DIR)/*.cu)
 OBJECTS := $(SOURCES:.cpp=.o)
 
 
@@ -17,7 +18,7 @@ all: $(TARGET)
 
 
 $(TARGET): $(OBJECTS)
-	$(NVCC) -o $@ $^
+	$(NVCC) -I$(INCLUDE_DIR) -o $@ $^
 
 
 %.o: %.c
