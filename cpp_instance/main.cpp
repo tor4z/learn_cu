@@ -49,6 +49,7 @@ class C: public A
 
 std::vector<A*>A::instances;
 
+
 int main()
 {
     std::cout << "LEARN INSTANCE" << std::endl;
