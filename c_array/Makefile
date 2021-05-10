@@ -5,7 +5,7 @@ CC          := g++
 CXXFLAGS    := -Wall -I$(INCLUDE_DIR)
 TARGET      := main.out
 
-SOURCES     := $(wildcard $(SOURCE_DIR)/*.cpp)
+SOURCES     := $(wildcard $(SOURCE_DIR)/*.c)
 OBJECTS     := $(SOURCES:.cpp=.o)
 
 
